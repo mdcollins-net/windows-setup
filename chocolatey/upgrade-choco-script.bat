@@ -1,23 +1,16 @@
-
-:: upgrade all the packages
-
-:::: Browsers
 choco upgrade googlechrome -y
 choco upgrade firefox -y
 choco upgrade opera -y
 
-:::: Powershell
 choco upgrade powershell4 -y
 choco upgrade powershell -y
 
-:::: Text editors / IDEs
 choco upgrade notepadplusplus -y
 choco upgrade notepad2 -y
 choco upgrade notepad3 -y
 choco upgrade atom -y
 choco upgrade graphviz -y
 
-:::: Dev tools
 choco upgrade git -y
 choco upgrade nodejs.install -y
 choco upgrade nodejs -y
@@ -30,13 +23,10 @@ choco upgrade virtualbox -y
 choco upgrade vagrant -y
 choco upgrade vagrant-manager -y
 
-:::: Media
 choco upgrade irfanview -fy
 choco upgrade irfanview-shellextension -fy
 choco upgrade irfanviewplugins -fy
 
-
-:::: Utilities + other
 choco upgrade 7zip.upgrade -y
 choco upgrade dropbox -y
 choco upgrade slack -y
