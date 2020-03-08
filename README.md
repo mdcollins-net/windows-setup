@@ -1,6 +1,7 @@
 # windows-setup
 
 Steps
+=====
 
 1. **Install Chocolatey**
 
