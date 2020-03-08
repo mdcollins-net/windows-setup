@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="" />
+    <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -14,6 +20,15 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1YqiegxWKfHkXfB70C2uBWqUz8o" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -33,8 +48,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583676621844</updated>
-      <workItem from="1583676625875" duration="2000" />
+      <workItem from="1583676625875" duration="635000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
 </project>
