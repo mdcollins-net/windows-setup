@@ -19,9 +19,16 @@ choco install terminus -fy
 choco install xml-notepad -fy
 choco install soapui -fy
 choco install postman -fy
+
 choco install virtualbox -fy
+choco install virtualbox-guest-additions-guest.install -fy
 choco install vagrant -fy
 choco install vagrant-manager -fy
+choco install docker-desktop -fy
+choco install docker-compose -fy
+choco install docker-cli -fy
+choco install docker-machine -fy
+choco install ctop -fy
 
 choco install irfanview -fy
 choco install irfanview-shellextension -fy

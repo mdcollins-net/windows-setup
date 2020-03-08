@@ -20,8 +20,14 @@ choco upgrade xml-notepad -y
 choco upgrade soapui -y
 choco upgrade postman -y
 choco upgrade virtualbox -y
+choco upgrade virtualbox-guest-additions-guest.install -y
 choco upgrade vagrant -y
 choco upgrade vagrant-manager -y
+choco upgrade docker-desktop -y
+choco upgrade docker-compose -y
+choco upgrade docker-cli -y
+choco upgrade docker-machine -y
+choco upgrade ctop -y
 
 choco upgrade irfanview -fy
 choco upgrade irfanview-shellextension -fy
