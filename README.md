@@ -5,11 +5,17 @@ Steps
 
 1. **Install Chocolatey**
 
-	Run cmd (Command Prompt) as Administrator and execute following:
+	Open PowerShell as Adminstrator and run following:
 	
-		@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/upgrade.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 2. **Run Chocolatey install script**
+
+	Open PowerShell as Adminstrator and run following:
+	
+		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('http://bit.ly/mcwinsetup'))
+		
+		
 
 
 		
