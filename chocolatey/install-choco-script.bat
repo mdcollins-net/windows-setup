@@ -46,3 +46,5 @@ choco install hackfont -fy
 choco install hackfont-windows -fy
 choco install skype -fy
 choco install skypeforbusiness -fy
+choco install curl -fy
+choco install wget -fy
