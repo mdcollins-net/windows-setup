@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583676621844</updated>
       <workItem from="1583676625875" duration="635000" />
+      <workItem from="1583680434990" duration="24000" />
     </task>
     <servers />
   </component>
