@@ -9,6 +9,19 @@ $banner="
 # Chocolatey utlities packages
 $chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", "mc")
 
+# Chocolatey tools packages
+$chocolatey_packages_tools = @( `
+    "sysinternals", "7zip.install", "powershellhere", "graphviz", `
+    "irfanview", "irfanview-shellextension", "irfanviewplugins"
+)
+
+# Chocolatey font packages
+$chocolatey_packages_fonts = @( `
+    "font-awesome-font", "sourcecodepro", "jetbrainsmono", `
+    "dejavufonts", "hackfont", "hackfont-windows", "fira", "firacode", "firacode-ttf", "firacodenf", `
+    "terminal-icons.powershell" `
+)
+
 # Chocolatey browser packages
 $chocolatey_packages_browsers = @("googlechrome", "firefox", "opera")
 
@@ -18,14 +31,7 @@ $chocolatey_packages_editors = @("notepadplusplus", "notepad2", "notepad3", "ato
 # Chocolatey terminal packages
 $chocolatey_packages_terminals = @("microsoft-windows-terminal", "conemu", "hyper", "terminus")
 
-# Chocolatey tools packages
-$chocolatey_packages_tools = @( `
-    "sysinternals", "7zip.install", "powershellhere", "graphviz", `
-    "irfanview", "irfanview-shellextension", "irfanviewplugins"
-)
 
-# Chocolatey font packages
-$chocolatey_packages_fonts = @("dejavufonts", "hackfont", "hackfont-windows", "firacode", "firacode-ttf")
 
 # Python packages
 $python_packages = @("python-language-server", "speedtest-cli")
@@ -71,10 +77,10 @@ function Install-Chocolatey_packages () {
     $chocolatey_packages = `
     @($chocolatey_packages_utils) + `
     @($chocolatey_packages_tools) + `
+    @($chocolatey_packages_fonts) + `
     @($chocolatey_packages_browsers) + `
     @($chocolatey_packages_editors) + `
-    @($chocolatey_packages_terminals) + `
-    @($chocolatey_packages_fonts)
+    @($chocolatey_packages_terminals)
 
     foreach ($package in $chocolatey_packages) {
         Install-Chocolatey_package ($package)

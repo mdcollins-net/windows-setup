@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/install-dotnet-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-dotnet-choco-script.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/install-java-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-java-choco-script.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,8 @@
       <workItem from="1583849233384" duration="4770000" />
       <workItem from="1583872448984" duration="1844000" />
       <workItem from="1584007775531" duration="3702000" />
+      <workItem from="1584114382195" duration="597000" />
+      <workItem from="1584115605798" duration="605000" />
     </task>
     <servers />
   </component>
