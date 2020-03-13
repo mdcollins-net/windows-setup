@@ -38,9 +38,13 @@ choco upgrade dropbox -y
 choco upgrade slack -y
 choco upgrade kdiff3 -y
 choco upgrade powershellhere -y
+
 choco upgrade dejavufonts -y
 choco upgrade hackfont -y
 choco upgrade hackfont-windows -y
+choco upgrade firacode -y
+choco upgrade firacode-ttf -y
+
 choco upgrade skype -y
 choco upgrade skypeforbusiness -y
 choco upgrade curl -y

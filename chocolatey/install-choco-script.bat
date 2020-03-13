@@ -39,9 +39,13 @@ choco install dropbox -fy
 choco install slack -fy
 choco install kdiff3 -fy
 choco install powershellhere -fy
+
 choco install dejavufonts -fy
 choco install hackfont -fy
 choco install hackfont-windows -fy
+choco install firacode -fy
+choco install firacode-ttf -fy
+
 choco install skype -fy
 choco install skypeforbusiness -fy
 choco install curl -fy

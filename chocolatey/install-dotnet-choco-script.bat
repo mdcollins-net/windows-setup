@@ -21,4 +21,3 @@ choco install netfx-4.7.2-devpack -fy
 
 choco install powershell4 -fy
 choco install powershell -fy
-

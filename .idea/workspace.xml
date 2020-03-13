@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-choco-script.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/install-dotnet-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-dotnet-choco-script.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/install-java-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-java-choco-script.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/upgrade-choco-script.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1YqiegxWKfHkXfB70C2uBWqUz8o" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -30,6 +39,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -49,11 +59,37 @@
       <option name="presentableId" value="Default" />
       <updated>1583676621844</updated>
       <workItem from="1583676625875" duration="635000" />
-      <workItem from="1583680434990" duration="24000" />
+      <workItem from="1583680434990" duration="825000" />
+      <workItem from="1583838784223" duration="4356000" />
+      <workItem from="1583849233384" duration="4770000" />
+      <workItem from="1583872448984" duration="1844000" />
+      <workItem from="1584007775531" duration="3702000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1003" y="139" width="1368" height="784" key="DiffContextDialog" timestamp="1583854313502">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="1003" y="139" width="1368" height="784" key="DiffContextDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1583854313502" />
   </component>
 </project>
