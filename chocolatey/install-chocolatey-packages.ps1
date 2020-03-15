@@ -11,8 +11,9 @@ $chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", 
 
 # Chocolatey tools packages
 $chocolatey_packages_tools = @( `
-    "sysinternals", "7zip.install", "powershellhere", "graphviz", `
-    "irfanview", "irfanview-shellextension", "irfanviewplugins"
+    "sysinternals", "7zip.install", "powershellhere", "powershellhere-elevated", "graphviz", `
+    "irfanview", "irfanview-shellextension", "irfanviewplugins", "7zip", "gimp", `
+    "gotomeeting", "dropbox", "google-backup-and-sync",  "veracrypt" `
 )
 
 # Chocolatey font packages
@@ -31,6 +32,11 @@ $chocolatey_packages_editors = @("notepadplusplus", "notepad2", "notepad3", "ato
 # Chocolatey terminal packages
 $chocolatey_packages_terminals = @("microsoft-windows-terminal", "conemu", "hyper", "terminus")
 
+# Chocolatey developer tools packages
+$chocolatey_packages_devtools = @( `
+    "jetbrainstoolbox", "intellijidea-ultimate", `
+    "tortoisegit", "soapui" `
+)
 
 
 # Python packages
@@ -80,7 +86,8 @@ function Install-Chocolatey_packages () {
     @($chocolatey_packages_fonts) + `
     @($chocolatey_packages_browsers) + `
     @($chocolatey_packages_editors) + `
-    @($chocolatey_packages_terminals)
+    @($chocolatey_packages_terminals) + `
+    @($chocolatey_packages_devtools)
 
     foreach ($package in $chocolatey_packages) {
         Install-Chocolatey_package ($package)
@@ -205,7 +212,7 @@ function Install-Rust () {
 Write-Banner
 Install-Python
 Install-Node
-Install-Chocolatey_Packages
-Install-Atom
 Install-Go
 Install-Rust
+Install-Chocolatey_Packages
+Install-Atom

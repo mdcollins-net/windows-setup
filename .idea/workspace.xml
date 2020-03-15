@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/setup.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-chocolatey-packages.ps1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="windows-setup" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,6 +64,7 @@
       <workItem from="1584114382195" duration="597000" />
       <workItem from="1584115605798" duration="693000" />
       <workItem from="1584117507984" duration="1355000" />
+      <workItem from="1584269630671" duration="3657000" />
     </task>
     <servers />
   </component>
