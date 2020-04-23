@@ -15,7 +15,15 @@ function Install-Chocolatey () {
     Set-ExecutionPolicy Bypass -Scope Process -Force; `
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Start-Sleep -Seconds 30
     Write-Host "`nFinished installing chocolatey"
+}
+
+function Install-SSH () {
+    Write-Host "`nInstalling SSH ...`n"
+    Add-WindowsCapability -Online -Name OpenSSH.Client*
+    Add-WindowsCapability -Online -Name OpenSSH.Server*
+    Write-Host "`nFinished installing SSH"
 }
 
 function Install-ChocolateyPackages () {
@@ -23,6 +31,7 @@ function Install-ChocolateyPackages () {
 }
 
 Write-Banner
+Install-SSH
 Install-Chocolatey
 Install-ChocolateyPackages
 
