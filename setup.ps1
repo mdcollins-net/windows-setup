@@ -7,13 +7,18 @@ $banner="
 "
 function Update-SessionEnvironment () {
     foreach($level in "Machine","User") {
-        [Environment]::GetEnvironmentVariables($level).GetEnumerator() | % {
-            # For Path variables, append the new values, if they're not already in there
-            if($_.Name -match 'Path$') {
-                $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select -unique) -join ';'
-            }
-            $_
-        } | Set-Content -Path { "Env:$($_.Name)" }
+        try {
+            [Environment]::GetEnvironmentVariables($level).GetEnumerator() | % {
+                # For Path variables, append the new values, if they're not already in there
+                if($_.Name -match 'Path$') {
+                    $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select -unique) -join ';'
+                }
+                $_
+            } | Set-Content -Path { "Env:$($_.Name)" }
+        }
+        catch {
+            # do nothing
+        }
     }
 }
 
@@ -26,7 +31,7 @@ function Install-Chocolatey () {
     Set-ExecutionPolicy Bypass -Scope Process -Force; `
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    Start-Sleep -Seconds 30
+    Start-Sleep -Seconds 10
     Update-SessionEnvironment
     Write-Host "`nFinished installing chocolatey"
 }
@@ -41,7 +46,7 @@ function Install-SSH () {
 
 function Install-ChocolateyPackages () {
     Update-SessionEnvironment
-    Start-Sleep -Seconds 30
+    Start-Sleep -Seconds 10
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-setup")) }'
 }
 

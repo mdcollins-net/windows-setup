@@ -40,13 +40,18 @@ $chocolatey_packages_devtools = @( `
 
 function Update-SessionEnvironment () {
     foreach($level in "Machine","User") {
-        [Environment]::GetEnvironmentVariables($level).GetEnumerator() | % {
-            # For Path variables, append the new values, if they're not already in there
-            if($_.Name -match 'Path$') {
-                $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select -unique) -join ';'
-            }
-            $_
-        } | Set-Content -Path { "Env:$($_.Name)" }
+        try {
+            [Environment]::GetEnvironmentVariables($level).GetEnumerator() | % {
+                # For Path variables, append the new values, if they're not already in there
+                if($_.Name -match 'Path$') {
+                    $_.Value = ($((Get-Content "Env:$($_.Name)") + ";$($_.Value)") -split ';' | Select -unique) -join ';'
+                }
+                $_
+            } | Set-Content -Path { "Env:$($_.Name)" }
+        }
+        catch {
+            # do nothing
+        }
     }
 }
 
@@ -79,29 +84,29 @@ function Install-Chocolatey_packages () {
     }
     Update-SessionEnvironment
     Write-Host "`nFinished installing chocolatey packages`n"
-    Start-Sleep -Seconds 30
+    Start-Sleep -Seconds 10
 }
 
 function Install-Python () {
     Write-Host "`nInstalling python ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 30
-    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python'
-    Start-Sleep -Seconds 120
+    Start-Sleep -Seconds 10
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python")) }'
+    Start-Sleep -Seconds 10
 }
 
 function Install-Node () {
     Write-Host "`nInstalling Node.js ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 30
+    Start-Sleep -Seconds 10
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-node")) }'
-    Start-Sleep -Seconds 120
+    Start-Sleep -Seconds 10
 }
 
 function Install-Atom () {
     Write-Host "`nInstalling Atom ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 30
+    Start-Sleep -Seconds 10
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom")) }'
 }
 
@@ -115,15 +120,15 @@ function Install-Go () {
 function Install-Rust () {
     Write-Host "`nInstalling Rust ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 90
+    Start-Sleep -Seconds 10
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-rust-lang")) }'
 }
 
 
 Write-Banner
-Install-Chocolatey_Packages
 Install-Python
+Install-Chocolatey_Packages
 Install-Node
-Install-Go
 Install-Rust
+Install-Go
 Install-Atom
