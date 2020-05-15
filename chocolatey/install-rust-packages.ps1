@@ -18,6 +18,13 @@ function Update-SessionEnvironment () {
     }
 }
 
+function Install-Go () {
+    Write-Host "`nInstalling Go ...`n"
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 10
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-go-lang")) }'
+}
+
 Write-Host "`nInstalling Rust packages ...`n"
 
 foreach ($p in $rust_packages) { cargo install $p }
@@ -25,3 +32,5 @@ foreach ($p in $rust_packages) { cargo install $p }
 Write-Host "`nFinished installing Rust packages ...`n"
 
 Update-SessionEnvironment
+
+Install-Go

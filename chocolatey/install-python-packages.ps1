@@ -19,7 +19,7 @@ function Update-SessionEnvironment () {
 }
 
 function Install-Python_package ($package) {
-    python3 -m pip3 install "$package"
+    python -m pip install "$package"
 }
 
 Write-Host "`nInstalling python packages ...`n"

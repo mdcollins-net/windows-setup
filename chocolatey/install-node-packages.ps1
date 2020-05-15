@@ -18,6 +18,13 @@ function Update-SessionEnvironment () {
     }
 }
 
+function Install-Rust () {
+    Write-Host "`nInstalling Rust ...`n"
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 10
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-rust-lang")) }'
+}
+
 Write-Host "`nInstalling Node packages ...`n"
 
 Update-SessionEnvironment
@@ -28,3 +35,4 @@ Write-Host "`nFinished installing Node packages ...`n"
 
 Update-SessionEnvironment
 
+Install-Rust

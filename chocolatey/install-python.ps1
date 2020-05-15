@@ -30,10 +30,10 @@ Update-SessionEnvironment
 Write-Host "`nInstalling python 3 ...`n"
 choco install python3
 Update-SessionEnvironment
-python3 -m pip install -U pip
+python -m pip install -U pip
 
 Update-SessionEnvironment
 
-Start-Sleep -Seconds 30
+Start-Sleep -Seconds 10
 
 invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python-packages")) }'

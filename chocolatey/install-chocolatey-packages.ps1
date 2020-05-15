@@ -7,7 +7,7 @@ $banner="
 "
 
 # Chocolatey utlities packages
-$chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", "mc")
+$chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", "mc", "git", "mingw")
 
 # Chocolatey tools packages
 $chocolatey_packages_tools = @( `
@@ -103,32 +103,12 @@ function Install-Node () {
     Start-Sleep -Seconds 10
 }
 
-function Install-Atom () {
-    Write-Host "`nInstalling Atom ...`n"
-    Update-SessionEnvironment
-    Start-Sleep -Seconds 10
-    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom")) }'
-}
-
-function Install-Go () {
-    Write-Host "`nInstalling Go ...`n"
-    Update-SessionEnvironment
-    Start-Sleep -Seconds 30
-    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-go-lang")) }'
-}
-
-function Install-Rust () {
-    Write-Host "`nInstalling Rust ...`n"
-    Update-SessionEnvironment
-    Start-Sleep -Seconds 10
-    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-rust-lang")) }'
-}
 
 
 Write-Banner
 Install-Python
 Install-Chocolatey_Packages
 Install-Node
-Install-Rust
-Install-Go
-Install-Atom
+
+
+

@@ -3,7 +3,7 @@
 Steps
 =====
 
-1. **Install Chocolatey**
+1. **Run chocolatey setup script**
 
 	Open PowerShell as Adminstrator and run following:
 	

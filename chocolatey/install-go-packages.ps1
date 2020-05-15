@@ -18,6 +18,13 @@ function Update-SessionEnvironment () {
     }
 }
 
+function Install-Atom () {
+    Write-Host "`nInstalling Atom ...`n"
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 10
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom")) }'
+}
+
 Write-Host "`nInstalling Go packages ...`n"
 
 foreach ($p in $go_packages) { go get -u -v $p }
@@ -26,3 +33,4 @@ Write-Host "`nFinished installing Go packages ...`n"
 
 Update-SessionEnvironment
 
+Install-Atom
