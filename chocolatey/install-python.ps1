@@ -16,24 +16,22 @@ function Update-SessionEnvironment () {
     }
 }
 
-Write-Host "`nInstalling python ...`n"
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Python 2 ..."
 
 choco feature enable -n allowGlobalConfirmation
 
 Write-Host "`nInstalling python 2 ...`n"
-choco install python2
-Update-SessionEnvironment
-python -m pip install -U pip
 
-Update-SessionEnvironment
+try {
+    #choco install python2
+    Update-SessionEnvironment
+    #python -m pip install -U pip
+    Start-Sleep -Seconds 2
+    Update-SessionEnvironment
+} catch {
+    $_
+} finally {
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python3")) }'
+}
 
-Write-Host "`nInstalling python 3 ...`n"
-choco install python3
-Update-SessionEnvironment
-python -m pip install -U pip
 
-Update-SessionEnvironment
-
-Start-Sleep -Seconds 10
-
-invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python-packages")) }'

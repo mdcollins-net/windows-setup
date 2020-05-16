@@ -18,11 +18,15 @@ function Update-SessionEnvironment () {
 
 Write-Host "`nInstalling Atom ...`n"
 
-choco feature enable -n allowGlobalConfirmation
-choco install atom
+try {
+    choco feature enable -n allowGlobalConfirmation
+    #choco install atom
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 2
+} catch {
+    $_
+} finally {
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom-packages")) }'
+}
 
-Update-SessionEnvironment
 
-Start-Sleep -Seconds 10
-
-invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom-packages")) }'

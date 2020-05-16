@@ -18,19 +18,34 @@ function Update-SessionEnvironment () {
     }
 }
 
+function Install-Node () {
+    Write-Host "`nInstalling Node.js ...`n"
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 2
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-node")) }'
+    Start-Sleep -Seconds 2
+}
+
 function Install-Python_package ($package) {
-    python -m pip install "$package"
+    try {
+        #python -m pip install "$package"
+    } catch {
+        $_
+    }
 }
 
-Write-Host "`nInstalling python packages ...`n"
+Write-Host "`nInstalling Python packages ...`n"
 
-Update-SessionEnvironment
-
-foreach ($package in $python_packages) {
-    Install-Python_package ($package)
+try {
+    Update-SessionEnvironment
+    foreach ($package in $python_packages) {
+        Install-Python_package ($package)
+    }
+    Write-Host "`nFinished installing python packages ...`n"
+    Update-SessionEnvironment
+} catch {
+    $_
+} finally {
+    Install-Node
 }
-
-Write-Host "`nFinished installing python packages ...`n"
-
-Update-SessionEnvironment
 

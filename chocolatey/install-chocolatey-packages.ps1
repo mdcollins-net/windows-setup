@@ -13,7 +13,7 @@ $chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", 
 $chocolatey_packages_tools = @( `
     "sysinternals", "7zip.install", "powershellhere", "powershellhere-elevated", "graphviz", `
     "irfanview", "irfanview-shellextension", "irfanviewplugins", "7zip", "gimp", `
-    "gotomeeting", "dropbox", "google-backup-and-sync",  "veracrypt" `
+    "gotomeeting", "dropbox", "google-backup-and-sync", "veracrypt" `
 )
 
 # Chocolatey font packages
@@ -61,7 +61,8 @@ function Write-Banner () {
 
 function Install-Chocolatey_package ($package) {
     Write-Host "`nInstalling chocolatey package: $package ...`n"
-    choco install $package
+    Start-Sleep -Seconds 2
+    #choco install $package
     Update-SessionEnvironment
 }
 
@@ -80,35 +81,32 @@ function Install-Chocolatey_packages () {
     @($chocolatey_packages_devtools)
 
     foreach ($package in $chocolatey_packages) {
-        Install-Chocolatey_package ($package)
+        try {
+            Install-Chocolatey_package ($package)
+        } catch {
+            $_
+        }
     }
+
     Update-SessionEnvironment
     Write-Host "`nFinished installing chocolatey packages`n"
-    Start-Sleep -Seconds 10
+    Start-Sleep -Seconds 2
 }
 
 function Install-Python () {
     Write-Host "`nInstalling python ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 10
+    Start-Sleep -Seconds 2
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-python")) }'
-    Start-Sleep -Seconds 10
+    Start-Sleep -Seconds 2
 }
 
-function Install-Node () {
-    Write-Host "`nInstalling Node.js ...`n"
-    Update-SessionEnvironment
-    Start-Sleep -Seconds 10
-    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-node")) }'
-    Start-Sleep -Seconds 10
-}
-
-
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Chocolatey packages ..."
 
 Write-Banner
-Install-Python
 Install-Chocolatey_Packages
-Install-Node
+Install-Python
+
 
 
 

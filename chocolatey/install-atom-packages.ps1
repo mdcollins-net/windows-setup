@@ -28,12 +28,17 @@ function Update-SessionEnvironment () {
     }
 }
 
-
 Write-Host "`nInstalling Atom packages ...`n"
 
-foreach ($p in $atom_packages) { apm install $p }
+try {
+    foreach ($p in $atom_packages) { apm install $p }
+    Update-SessionEnvironment
+} catch {
+    $_
+} finally {
+    Write-Host "`nFinished installing Atom packages ...`n"
+}
 
-Update-SessionEnvironment
 
-Write-Host "`nFinished installing Atom packages ...`n"
+
 

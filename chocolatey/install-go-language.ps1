@@ -18,11 +18,15 @@ function Update-SessionEnvironment () {
 
 Write-Host "`nInstalling Go ...`n"
 
-choco feature enable -n allowGlobalConfirmation
-choco install golang
+try {
+    choco feature enable -n allowGlobalConfirmation
+    #choco install golang
+    Update-SessionEnvironment
+    Start-Sleep -Seconds 2
+} catch {
+    $_
+} finally {
+    invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-go-packages")) }'
+}
 
-Update-SessionEnvironment
 
-Start-Sleep -Seconds 30
-
-invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-go-packages")) }'

@@ -21,18 +21,21 @@ function Update-SessionEnvironment () {
 function Install-Rust () {
     Write-Host "`nInstalling Rust ...`n"
     Update-SessionEnvironment
-    Start-Sleep -Seconds 10
+    Start-Sleep -Seconds 2
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-rust-lang")) }'
 }
 
 Write-Host "`nInstalling Node packages ...`n"
 
-Update-SessionEnvironment
+try {
+    Update-SessionEnvironment
+    #foreach ($p in $node_packages) { npm i -g $p }
+    Write-Host "`nFinished installing Node packages ...`n"
+    Update-SessionEnvironment
+} catch {
+    $_
+} finally {
+    Install-Rust
+}
 
-foreach ($p in $node_packages) { npm i -g $p }
 
-Write-Host "`nFinished installing Node packages ...`n"
-
-Update-SessionEnvironment
-
-Install-Rust

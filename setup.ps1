@@ -15,8 +15,7 @@ function Update-SessionEnvironment () {
                 }
                 $_
             } | Set-Content -Path { "Env:$($_.Name)" }
-        }
-        catch {
+        } catch {
             # do nothing
         }
     }
@@ -28,32 +27,41 @@ function Write-Banner () {
 
 function Install-Chocolatey () {
     Write-Host "`nInstalling chocolatey ...`n"
-    Set-ExecutionPolicy Bypass -Scope Process -Force; `
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    Start-Sleep -Seconds 10
-    Update-SessionEnvironment
+    try {
+        Set-ExecutionPolicy Bypass -Scope Process -Force; `
+            [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+            iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+        Start-Sleep -Seconds 2
+        Update-SessionEnvironment
+    } catch {
+        $_
+    }
     Write-Host "`nFinished installing chocolatey"
 }
 
 function Install-SSH () {
     Write-Host "`nInstalling SSH ...`n"
-    Add-WindowsCapability -Online -Name OpenSSH.Client*
-    Add-WindowsCapability -Online -Name OpenSSH.Server*
-    Update-SessionEnvironment
+    try {
+        Add-WindowsCapability -Online -Name OpenSSH.Client*
+        Add-WindowsCapability -Online -Name OpenSSH.Server*
+        Update-SessionEnvironment
+    } catch {
+        $_
+    }
     Write-Host "`nFinished installing SSH"
 }
 
 function Install-ChocolateyPackages () {
     Update-SessionEnvironment
-    Start-Sleep -Seconds 10
+    Start-Sleep -Seconds 2
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-setup")) }'
 }
 
-
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Chocolatey ..."
 
 Write-Banner
 Install-SSH
 Install-Chocolatey
 Install-ChocolateyPackages
+
 
