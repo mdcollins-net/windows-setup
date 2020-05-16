@@ -25,6 +25,8 @@ function Install-Rust () {
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-rust-lang")) }'
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Node packages ..."
+
 Write-Host "`nInstalling Node packages ...`n"
 
 try {

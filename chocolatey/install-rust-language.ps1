@@ -16,6 +16,8 @@ function Update-SessionEnvironment () {
     }
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Rust ..."
+
 Write-Host "`nInstalling Rust ...`n"
 
 try {

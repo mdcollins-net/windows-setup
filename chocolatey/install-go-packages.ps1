@@ -25,6 +25,8 @@ function Install-Atom () {
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-atom")) }'
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Go packages ..."
+
 Write-Host "`nInstalling Go packages ...`n"
 
 try {

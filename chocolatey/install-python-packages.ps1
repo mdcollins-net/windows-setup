@@ -34,6 +34,8 @@ function Install-Python_package ($package) {
     }
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Python packages ..."
+
 Write-Host "`nInstalling Python packages ...`n"
 
 try {

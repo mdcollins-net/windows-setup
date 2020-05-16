@@ -16,6 +16,8 @@ function Update-SessionEnvironment () {
     }
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Atom ..."
+
 Write-Host "`nInstalling Atom ...`n"
 
 try {

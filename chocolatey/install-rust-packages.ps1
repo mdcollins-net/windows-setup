@@ -25,6 +25,8 @@ function Install-Go () {
     invoke-expression 'cmd /c start powershell -Command { iex ((New-Object System.Net.WebClient).DownloadString("https://go.mdcollins.net/choco-go-lang")) }'
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Rust packages ..."
+
 Write-Host "`nInstalling Rust packages ...`n"
 
 try {

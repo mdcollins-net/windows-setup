@@ -61,7 +61,6 @@ function Write-Banner () {
 
 function Install-Chocolatey_package ($package) {
     Write-Host "`nInstalling chocolatey package: $package ...`n"
-    Start-Sleep -Seconds 2
     #choco install $package
     Update-SessionEnvironment
 }

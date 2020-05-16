@@ -16,6 +16,8 @@ function Update-SessionEnvironment () {
     }
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Go ..."
+
 Write-Host "`nInstalling Go ...`n"
 
 try {

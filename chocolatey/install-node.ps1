@@ -16,6 +16,8 @@ function Update-SessionEnvironment () {
     }
 }
 
+$Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Node ..."
+
 Write-Host "`nInstalling Node.js ...`n"
 
 try {

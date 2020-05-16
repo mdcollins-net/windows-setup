@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="521344a7-aecf-4dc2-a3e2-8821b867ca82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chocolatey/install-python3.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-atom-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-atom-packages.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-atom.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-atom.ps1" afterDir="false" />
@@ -12,10 +11,8 @@
       <change beforePath="$PROJECT_DIR$/chocolatey/install-node-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-node-packages.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-node.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-node.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-python-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-python-packages.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolatey/install-python.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-python.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-rust-language.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-rust-language.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chocolatey/install-rust-packages.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/chocolatey/install-rust-packages.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/setup.ps1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <workItem from="1587369700869" duration="2150000" />
       <workItem from="1587636261917" duration="262000" />
       <workItem from="1587636913714" duration="16088000" />
-      <workItem from="1589552716393" duration="6156000" />
+      <workItem from="1589552716393" duration="7057000" />
     </task>
     <servers />
   </component>
