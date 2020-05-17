@@ -10,15 +10,23 @@ $url_office_configuration_file="https://files.mdcollins.net/OfficeConfigurationF
 
 $path_current_directory=(Get-Item -Path ".\").FullName
 
+Write-Host "`nDownloading Office Deployment Tool ...`n"
+
 Invoke-WebRequest -Uri $url_office_deployment_tool -OutFile OfficeDeploymentTool.exe
 Start-Sleep -Seconds 4
+
+Write-Host "`nDownloading Office configuration file ...`n"
 
 Invoke-WebRequest -Uri $url_office_configuration_file -OutFile configuration.xml
 Start-Sleep -Seconds 4
 
+Write-Host "`nExtracting Office Deployment files ...`n"
+
 ./OfficeDeploymentTool.exe /extract:$path_current_directory /quiet /passive
 Start-Sleep -Seconds 8
 
-./setup.exe /customize ./configuration.xml
+Write-Host "`nExecuting Office installation ...`n"
+
+./setup.exe /configure ./configuration.xml
 
 
