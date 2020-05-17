@@ -8,8 +8,8 @@
 $url_office_deployment_tool="https://files.mdcollins.net/OfficeDeploymentTool"
 $url_office_configuration_file="https://files.mdcollins.net/OfficeConfigurationFile"
 
-Invoke-WebRequest -Uri $url_office_deployment_tool -OutFile $output
-Invoke-WebRequest -Uri $url_office_configuration_file $output
+Invoke-WebRequest -Uri $url_office_deployment_tool -OutFile OfficeDeploymentTool.exe
+Invoke-WebRequest -Uri $url_office_configuration_file -OutFile configuration.xml
 
 ./OfficeDeploymentTool.exe /customize ./configuration.xml
 
