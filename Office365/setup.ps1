@@ -8,9 +8,13 @@
 $url_office_deployment_tool="https://files.mdcollins.net/OfficeDeploymentTool"
 $url_office_configuration_file="https://files.mdcollins.net/OfficeConfigurationFile"
 
+$path_current_directory=(Get-Item -Path ".\").FullName
+
 Invoke-WebRequest -Uri $url_office_deployment_tool -OutFile OfficeDeploymentTool.exe
 Invoke-WebRequest -Uri $url_office_configuration_file -OutFile configuration.xml
 
-./OfficeDeploymentTool.exe /customize ./configuration.xml
+./OfficeDeploymentTool.exe /extract:$path_current_directory
+
+./setup.exe /customize ./configuration.xml
 
 
