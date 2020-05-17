@@ -1,0 +1,13 @@
+<Configuration>
+  <Add  SourcePath="\\Server\Share"
+        OfficeClientEdition="64"
+        Channel="Broad" >
+    <Product ID="O365HomePremRetail">
+      <Language ID="en-us" />
+    </Product>
+  </Add>
+  <Updates  Enabled="TRUE"
+            UpdatePath="%temp%" />
+    <Display Level="Full" AcceptEULA="TRUE" />
+    <Logging Level="Standard" Path="%temp%" />
+</Configuration>
