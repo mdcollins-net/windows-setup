@@ -1,6 +1,5 @@
 <Configuration>
-  <Add  SourcePath="\\Server\Share"
-        OfficeClientEdition="64"
+  <Add  OfficeClientEdition="64"
         Channel="Broad" >
     <Product ID="O365HomePremRetail">
       <Language ID="en-us" />
