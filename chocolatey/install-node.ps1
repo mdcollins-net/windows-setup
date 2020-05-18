@@ -23,7 +23,7 @@ Write-Host "`nInstalling Node.js ...`n"
 try {
     choco feature enable -n allowGlobalConfirmation
     $pkgs = @("nodejs.install", "npmtaskrunner", "ndm", "yarn")
-    #foreach ($p in $pkgs) { choco install $p }
+    foreach ($p in $pkgs) { choco install $p }
     Update-SessionEnvironment
     Start-Sleep -Seconds 2
 } catch {

@@ -22,7 +22,7 @@ Write-Host "`nInstalling Atom ...`n"
 
 try {
     choco feature enable -n allowGlobalConfirmation
-    #choco install atom
+    choco install atom
     Update-SessionEnvironment
     Start-Sleep -Seconds 2
 } catch {

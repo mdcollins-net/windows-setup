@@ -22,7 +22,7 @@ Write-Host "`nInstalling Rust ...`n"
 
 try {
     choco feature enable -n allowGlobalConfirmation
-    #choco install rust
+    choco install rust
     Update-SessionEnvironment
     Start-Sleep -Seconds 2
 } catch {

@@ -22,7 +22,7 @@ Write-Host "`nInstalling Go ...`n"
 
 try {
     choco feature enable -n allowGlobalConfirmation
-    #choco install golang
+    choco install golang
     Update-SessionEnvironment
     Start-Sleep -Seconds 2
 } catch {

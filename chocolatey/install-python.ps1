@@ -23,9 +23,9 @@ choco feature enable -n allowGlobalConfirmation
 Write-Host "`nInstalling python 2 ...`n"
 
 try {
-    #choco install python2
+    choco install python2
     Update-SessionEnvironment
-    #python -m pip install -U pip
+    python -m pip install -U pip
     Start-Sleep -Seconds 2
     Update-SessionEnvironment
 } catch {

@@ -31,7 +31,7 @@ Write-Host "`nInstalling Node packages ...`n"
 
 try {
     Update-SessionEnvironment
-    #foreach ($p in $node_packages) { npm i -g $p }
+    foreach ($p in $node_packages) { npm i -g $p }
     Write-Host "`nFinished installing Node packages ...`n"
     Update-SessionEnvironment
 } catch {

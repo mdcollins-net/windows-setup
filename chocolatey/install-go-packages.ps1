@@ -30,7 +30,7 @@ $Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Go packages ..."
 Write-Host "`nInstalling Go packages ...`n"
 
 try {
-    #foreach ($p in $go_packages) { go get -u -v $p }
+    foreach ($p in $go_packages) { go get -u -v $p }
     Write-Host "`nFinished installing Go packages ...`n"
     Update-SessionEnvironment
 } catch {

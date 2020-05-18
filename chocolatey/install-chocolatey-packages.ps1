@@ -61,7 +61,7 @@ function Write-Banner () {
 
 function Install-Chocolatey_package ($package) {
     Write-Host "`nInstalling chocolatey package: $package ...`n"
-    #choco install $package
+    choco install $package
     Update-SessionEnvironment
 }
 

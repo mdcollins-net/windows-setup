@@ -28,7 +28,7 @@ function Install-Node () {
 
 function Install-Python_package ($package) {
     try {
-        #python -m pip install "$package"
+        python -m pip install "$package"
     } catch {
         $_
     }

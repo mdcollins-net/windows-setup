@@ -30,7 +30,7 @@ $Host.UI.RawUI.WindowTitle = "Windows Setup : Installing Rust packages ..."
 Write-Host "`nInstalling Rust packages ...`n"
 
 try {
-    #foreach ($p in $rust_packages) { cargo install $p }
+    foreach ($p in $rust_packages) { cargo install $p }
     Write-Host "`nFinished installing Rust packages ...`n"
     Update-SessionEnvironment
 } catch {

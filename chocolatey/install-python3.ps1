@@ -23,11 +23,11 @@ Update-SessionEnvironment
 Write-Host "`nInstalling python 3 ...`n"
 
 try {
-    #choco install python3
+    choco install python3
     Start-Sleep -Seconds 2
     Update-SessionEnvironment
     Start-Sleep -Seconds 2
-    #python -m pip install -U pip
+    python -m pip install -U pip
     Start-Sleep -Seconds 2
     Update-SessionEnvironment
 } catch {
