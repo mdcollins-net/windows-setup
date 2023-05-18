@@ -30,7 +30,7 @@ $chocolatey_packages_browsers = @("googlechrome", "firefox", "opera", "vivaldi")
 $chocolatey_packages_editors = @("notepadplusplus", "notepad2", "notepad3")
 
 # Chocolatey terminal packages
-$chocolatey_packages_terminals = @("microsoft-windows-terminal", "conemu", "hyper", "terminus")
+$chocolatey_packages_terminals = @("microsoft-windows-terminal", "conemu", "hyper", "terminus", "cmder")
 
 # Chocolatey developer tools packages
 $chocolatey_packages_devtools = @( `
