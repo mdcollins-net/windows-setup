@@ -13,7 +13,7 @@ $chocolatey_packages_utils = @("curl", "wget", "which", "ctags", "vim-console", 
 $chocolatey_packages_tools = @( `
     "sysinternals", "7zip.install", "powershellhere", "powershellhere-elevated", "graphviz", `
     "irfanview", "irfanview-shellextension", "irfanviewplugins", "7zip", "gimp", `
-    "gotomeeting", "dropbox", "google-backup-and-sync", "veracrypt" `
+    "gotomeeting", "dropbox", "google-backup-and-sync", "veracrypt", "xyplorer" `
 )
 
 # Chocolatey font packages
