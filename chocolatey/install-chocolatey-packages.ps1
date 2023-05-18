@@ -24,7 +24,7 @@ $chocolatey_packages_fonts = @( `
 )
 
 # Chocolatey browser packages
-$chocolatey_packages_browsers = @("googlechrome", "firefox", "opera")
+$chocolatey_packages_browsers = @("googlechrome", "firefox", "opera", "vivaldi")
 
 # Chocolatey editor packages
 $chocolatey_packages_editors = @("notepadplusplus", "notepad2", "notepad3")
